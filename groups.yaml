@@ -1,0 +1,119 @@
+nest:
+  name: Nest
+  entities:
+  - sensor.living_room_thermostat_temperature
+  - sensor.living_room_thermostat_humidity
+  - sensor.living_room_thermostat_target
+  - sensor.living_room_thermostat_operation_mode
+  - sensor.living_room_thermostat_hvac_state
+  - binary_sensor.living_room_thermostat_online
+  - binary_sensor.living_room_thermostat_has_leaf
+  - binary_sensor.living_room_thermostat_is_using_emergency_heat
+  - binary_sensor.living_room_thermostat_fan
+  - binary_sensor.living_room_thermostat_is_locked
+pi_hole:
+  name: Pi-Hole Ad Blocking
+  entities:
+  - device_tracker.b827eb407116
+  - sensor.pihole_ads_blocked_today
+  - sensor.pihole_ads_percentage_blocked_today
+  - sensor.pihole_dns_queries_today
+  - sensor.domains_being_blocked
+  - sensor.queries_cached
+  - sensor.queries_forwarded
+  - sensor.unique_clients
+  - sensor.unique_domains
+laptops:
+  name: Laptops
+  entities:
+  - device_tracker.5cac4cbde18b
+  - device_tracker.t420fluffycom
+nmap_ha_devices:
+  name: Home Automation Devices
+  entities:
+  - device_tracker.78a5dd0779e3
+  - device_tracker.78a5dd077a65
+  - device_tracker.homeyfluffycom
+  - device_tracker.09aa01ac39160535fluffycom
+  - device_tracker.50c7bf76d558
+  - device_tracker.50c7bf7be306
+infrastructure:
+  name: Servers, Printers, Routers
+  entities:
+  - device_tracker.506a0305593f
+  - device_tracker.hp21c00afluffycom
+  - device_tracker.googlehomefluffycom
+  - device_tracker.gollonasfluffycom
+  - device_tracker.pihole
+media_players:
+  name: Media Players
+  entities:
+  - media_player.living_room_tv
+  - media_player.living_room_home
+  - media_player.ue48ju6445_ue48ju6400
+  - device_tracker.localhostfluffycom
+  - device_tracker.chromecastfluffycom
+  - device_tracker.amazon9fee7a7d1fluffycom
+  - media_player.firetv
+  - media_player.firetvkodi
+  - device_tracker.amazonbdaafd32bfluffycom
+  - media_player.firestick
+  - media_player.firestickkodi
+  view: false
+speedtests:
+  name: Broadband Speed
+  entities:
+  - sensor.speedtest_ping
+  - sensor.speedtest_download
+  - sensor.speedtest_upload
+phones:
+  name: Phones and Tablets
+  entities:
+  - device_tracker.fluffy_fluffy_phone
+  - device_tracker.androidbb98f5450fe355cefluffycom
+  - device_tracker.android850869cb2306b2d1fluffycom
+  - device_tracker.android22159572f45b5a3fluffycom
+system_info:
+  name: hass System Information
+  entities:
+  - sensor.disk_use_
+  - sensor.disk_use__2
+  - sensor.disk_free_
+  - sensor.ram_use
+  - sensor.ram_use_2
+  - sensor.ram_free
+  - sensor.swap_use
+  - sensor.swap_use_2
+  - sensor.swap_free
+  - sensor.average_load_1m
+  - sensor.average_load_5m
+  - sensor.average_load_15m
+  - sensor.received_eth0
+  - sensor.sent_eth0
+  - sensor.ipv4_address_eth0
+  - sensor.cpu_use
+  - sensor.last_boot
+  - sensor.since_last_boot
+weather:
+  name: MetOffice Weather
+  entities:
+  - sensor.met_office_weather
+  - sensor.met_office_temperature
+  - sensor.met_office_feels_like_temperature
+  - sensor.met_office_wind_speed
+  - sensor.met_office_wind_direction
+  - sensor.met_office_wind_gust
+  - sensor.met_office_visibility
+  - sensor.met_office_uv
+  - sensor.met_office_probability_of_precipitation
+  - sensor.met_office_humidity
+cameras:
+  name: Cameras
+  entities:
+#  - camera.raspberry
+  - camera.kitchen
+  - camera.study
+sun:
+  name: Sun
+  entities:
+  - sun.sun

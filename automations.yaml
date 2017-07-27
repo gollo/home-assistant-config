@@ -1,0 +1,57 @@
+- action:
+  - alias: hometalk
+    data:
+      entity_id: media_player.living_room_home
+      message: ' Hello Fluffy'
+    service: tts.google_say
+  alias: Test TTS to Google Home
+  id: '1495388821385'
+  trigger:
+  - above: '50'
+    entity_id: sensor.random_sensor
+    platform: numeric_state
+- action:
+  - alias: hometalk
+    data:
+      entity_id: media_player.living_room_home
+      message: Welcome Home Fluffy you glorious bastard
+    service: tts.google_say
+  alias: Welcome Home
+  id: '1495538617797'
+  trigger:
+  - entity_id: device_tracker.androidbb98f5450fe355cefluffycom
+    from: not_home
+    platform: state
+    to: home
+- alias: lamp_on_sunset
+  id: '1493458617797'
+  trigger:
+  - event: sunset
+    offset: -00:30:00
+    platform: sun
+  action:
+  - data:
+      event: On_Off
+      value1: 'on'
+    service: ifttt.trigger
+- alias: lamp_off_sunrise
+  id: '1343538617791'
+  trigger:
+  - event: sunrise
+    offset: 00:45:00
+    platform: sun
+  action:
+  - data:
+      event: On_Off
+      value1: 'off'
+    service: ifttt.trigger
+- alias: lamp_off_midnight
+  id: '1343534537791'
+  trigger:
+    platform: time
+    at: '00:30:00'
+  action:
+    service: ifttt.trigger
+    data: {"event":"On_Off", "value1":"off"}
+
+  

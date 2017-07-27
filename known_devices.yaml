@@ -1,0 +1,181 @@
+506a0305593f:
+  name: Virgin Router
+  hide_if_away: false
+  mac: 50:6A:03:05:59:3F
+  picture:
+  track: true
+  vendor: NETGEAR
+
+t420fluffycom:
+  name: T420
+  hide_if_away: false
+  mac: A0:88:B4:AB:3B:20
+  picture:
+  track: true
+  vendor: Intel Corporate
+
+78a5dd077a65:
+  name: Web Cam 1
+  hide_if_away: false
+  mac: 78:A5:DD:07:7A:65
+  picture:
+  track: true
+  vendor: Shenzhen Smarteye Digital Electronics Co., Ltd
+
+hp21c00afluffycom:
+  name: Printer
+  hide_if_away: false
+  mac: F4:CE:46:21:C0:0A
+  picture:
+  track: true
+  vendor: Hewlett Packard
+
+androidbb98f5450fe355cefluffycom:
+  name: Xperia Z5
+  hide_if_away: false
+  mac: 40:B8:37:D4:08:DE
+  picture:
+  track: true
+  vendor: Sony Mobile Communications AB
+
+chromecastfluffycom:
+  name: ChromeCast TV
+  hide_if_away: false
+  mac: D0:E7:82:CE:AC:CC
+  picture:
+  track: true
+  vendor: AzureWave Technology Inc.
+
+78a5dd0779e3:
+  name: Web Cam 2
+  hide_if_away: false
+  mac: 78:A5:DD:07:79:E3
+  picture:
+  track: true
+  vendor: Shenzhen Smarteye Digital Electronics Co., Ltd
+
+homeyfluffycom:
+  name: Homey
+  hide_if_away: false
+  mac: 6C:AD:F8:05:0D:F9
+  picture:
+  track: true
+  vendor: AzureWave Technology Inc.
+
+googlehomefluffycom:
+  name: Google Home
+  hide_if_away: false
+  mac: A4:77:33:2F:CD:2C
+  picture:
+  track: true
+  vendor: Google, Inc.
+
+localhostfluffycom:
+  name: TV
+  hide_if_away: false
+  mac: 38:01:95:E7:0D:34
+  picture:
+  track: true
+  vendor: Samsung Electronics Co.,Ltd
+
+amazon9fee7a7d1fluffycom:
+  name: Fire TV
+  hide_if_away: false
+  mac: A0:02:DC:51:64:87
+  picture:
+  track: true
+  vendor: Amazon Technologies Inc.
+
+amazonbdaafd32bfluffycom:
+  name: Fire TV Stick
+  hide_if_away: false
+  mac: 74:75:48:3D:36:F4
+  picture:
+  track: true
+  vendor: Amazon Technologies Inc.
+
+09aa01ac39160535fluffycom:
+  name: Nest
+  hide_if_away: false
+  mac: 18:B4:30:84:05:A7
+  picture:
+  track: true
+  vendor: Nest Labs Inc.
+
+
+fluffy_fluffy_phone:
+  hide_if_away: false
+  mac:
+  name: fluffy
+  picture:
+  track: true
+  vendor:
+
+pihole:
+  hide_if_away: false
+  mac: B8:27:EB:36:4E:41
+  name: pi-hole
+  picture:
+  track: true
+  vendor: Raspberry Pi Foundation
+
+android850869cb2306b2d1fluffycom:
+  hide_if_away: false
+  mac: 30:85:A9:4B:5B:3F
+  name: Nexus 7
+  picture:
+  track: true
+  vendor: ASUSTek COMPUTER INC.
+
+gollonasfluffycom:
+  hide_if_away: false
+  mac: 50:AF:73:21:ED:F0
+  name: NAS Server
+  picture:
+  track: true
+  vendor: Shenzhen Bitland Information Technology Co., Ltd.
+
+android22159572f45b5a3fluffycom:
+  hide_if_away: false
+  icon:
+  mac: 00:23:76:F8:86:95
+  name: HTC Desire
+  picture:
+  track: true
+  vendor: HTC Corporation
+
+5cac4cbde18b:
+  hide_if_away: false
+  icon:
+  mac: 5C:AC:4C:BD:E1:8B
+  name: T410
+  picture:
+  track: true
+  vendor: Hon Hai Precision Ind. Co.,Ltd.
+
+b827eb407116:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:40:71:16
+  name: pi-hole
+  picture:
+  track: true
+  vendor: Raspberry Pi Foundation
+
+50c7bf76d558:
+  hide_if_away: false
+  icon:
+  mac: 50:C7:BF:76:D5:58
+  name: TP-LINK Plug
+  picture:
+  track: true
+  vendor: TP-LINK TECHNOLOGIES CO.,LTD.
+
+50c7bf7be306:
+  hide_if_away: false
+  icon:
+  mac: 50:C7:BF:7B:E3:06
+  name: TP-LINK Bulb
+  picture:
+  track: true
+  vendor: TP-LINK TECHNOLOGIES CO.,LTD.
