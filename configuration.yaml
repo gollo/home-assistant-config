@@ -59,6 +59,8 @@ logger:
   default: warn
   logs:
     homeassistant.components.hassio: debug
+    requests.packages.urllib3: critical
+    homeassistant.components.camera.mjpeg: critical
 
 # Track the sun
 sun:
@@ -69,13 +71,24 @@ ifttt:
 
 # Weather Prediction
 sensor:
+#  - platform: uk_transport
+#    app_id: cc320ee8
+#    app_key: aaffb8f1a9aeb35abbaab931bbc40b4f
+#    queries:
+#      - mode: train
+#        origin: BKH
+#        destination: LBG
+#      - mode: bus
+#        origin: 490005918E
+#        destination: 'P R Hospital'
+#  - platform: london_underground
+#    line:
+#      - Northern
   - platform: plex
     host: 192.168.0.11
     port: 32400
     username: !secret sensor_plex_username
     password: !secret sensor_plex_password
-  - platform: metoffice
-    api_key: !secret sensor_metoffice_api_key
     monitored_conditions:
       - weather
       - temperature
@@ -84,10 +97,11 @@ sensor:
       - wind_direction
       - wind_gust
       - visibility
+      - visibility_distance
       - uv
       - precipitation
       - humidity
-  - platform: random
+#  - platform: random
   - platform: speedtest
     minute:
       - 0
@@ -152,12 +166,19 @@ media_player:
   - name: firetv-kodi
     platform: kodi
     host: 192.168.0.145
-#  - name: firestick
-#    platform: firetv
-#    device: firetvstick
+  - name: firestick
+    platform: firetv
+    device: firetvstick
   - name: firetv
     platform: firetv
     device: firetv
+  - platform: plex
+    entity_namespace: 'plex'
+    include_non_clients: true
+    scan_interval: 5
+    show_all_controls: false
+    use_custom_entity_ids: true
+    use_episode_art: true
 
 nest:
   client_id: !secret nest_client_id
@@ -197,17 +218,17 @@ weather:
 #    file_path: /tmp/touched.jpg
   
 
-#camera:
-#  - platform: mjpeg
-#    name: Front Room
-#    mjpeg_url: http://192.168.0.196/videostream.cgi
-#    username: admin
-#    password: !secret camera_mjpeg_password mDaO2203
-#  - platform: mjpeg
-#    name: Back Yard
-#    mjpeg_url: http://192.168.0.170/videostream.cgi
-#    username: admin
-#    password: !secret camera_mjpeg_password
+camera:
+  - platform: mjpeg
+    name: Front Room
+    mjpeg_url: http://192.168.0.196/videostream.cgi
+    username: admin
+    password: !secret camera_mjpeg_password
+  - platform: mjpeg
+    name: Back Yard
+    mjpeg_url: http://192.168.0.170/videostream.cgi
+    username: admin
+    password: !secret camera_mjpeg_password
 
     
 automation: !include automations.yaml
@@ -246,10 +267,15 @@ notify:
   - platform: nfandroidtv
     name: firetvstick
     host: 192.168.0.144
+  - platform: html5
+    name: push
+    gcm_api_key: 'AAAA851ZwwI:APA91bG-rN8Tt-mecmFWt9pkNI3MxyVc8v6nCUbI_JJ1Z1gZqQu_5yyN8nHjAo-gRmXC_VrVBEf34ZQA9uY84Ew8ezbNglKRy9VPyJQcbXysLdOj31x5Jz9io1xZ0mH9Oco1InJKgkt9'
+    gcm_sender_id: 'AIzaSyADusR5qZqaTuVr-aefuVuFi6zRJtqxTNQ'
 
-#light:
-#  - platform: tplink
-#    host: 192.168.0.112
+
+light:
+  - platform: tplink
+    host: 192.168.0.112
 
 switch:
   - platform: tplink
@@ -258,3 +284,29 @@ switch:
 binary_sensor:
   - platform: ping
     host: 192.168.0.1
+
+# Define input_slider
+input_slider:
+  downstairs_brightness:
+    name: Brightness
+    initial: 255
+    min: 0
+    max: 255
+    step: 1
+
+climate:
+  - platform: nest
+
+prometheus:
+
+panel_iframe:
+  terminal:
+    title: Terminal
+    icon: mdi:console
+    url: http://192.168.0.190:7681
+
+panel_iframe:
+  configurator:
+    title: Configurator
+    icon: mdi:settings
+    url: http://192.168.0.190:3218

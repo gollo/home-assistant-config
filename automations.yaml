@@ -23,6 +23,10 @@
     from: not_home
     platform: state
     to: home
+  condition:
+    condition: time
+    after: '08:00:00'
+    before: '23:00:00'
 - alias: lamp_on_sunset
   id: '1493458617797'
   trigger:
@@ -53,5 +57,16 @@
   action:
     service: ifttt.trigger
     data: {"event":"On_Off", "value1":"off"}
+- alias: Downstairs Light - Adjust Brightness
+  id: '1495538717797'
+  trigger:
+  - entity_id: input_slider.downstairs_brightness
+    platform: state
+  action:
+  - data_template:
+      brightness: '{{ trigger.to_state.state | int }}'
+      entity_id: light.downstairs
+    service: light.turn_on
+
 
   
