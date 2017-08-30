@@ -69,8 +69,10 @@ sun:
 ifttt:
   key: !secret ifttt_key
 
-# Weather Prediction
 sensor:
+  - platform: london_air
+    locations:
+      - Lewisham
 #  - platform: uk_transport
 #    app_id: cc320ee8
 #    app_key: aaffb8f1a9aeb35abbaab931bbc40b4f
@@ -157,8 +159,6 @@ sensor:
 tts:
   platform: google
 
-group: !include groups.yaml
-
 media_player:
   - name: firestick-kodi
     platform: kodi
@@ -232,33 +232,8 @@ camera:
 
     
 automation: !include automations.yaml
-
-#automation old:
-#  - alias: Check sensor value and Telegram 
-#    trigger:
-#      platform: numeric_state
-#      entity_id: sensor.random_sensor
-#      above: 10
-#    action:
-#      - service: persistent_notification.create
-#        data:
-#          message: "Sensor value greater than 10"
-#      - service: telegram_bot.send_message
-#        data:
-#          message: "Fucking gaylord"
-#      - service: tts.google_say
-#        entity_id: media_player.living_room_home
-#        data:
-#          message: 'May the Force be with you.'
-#
-#  - alias: Turn on light when sun sets
-#    initial_state: True
-#    hide_entity: False
-#    trigger:
-#      platform: sun
-#      event: sunset
-#    action:
-#      service: light.turn_on
+group: !include groups.yaml
+script: !include scripts.yaml
 
 notify:
   - platform: nfandroidtv
@@ -304,9 +279,8 @@ panel_iframe:
     title: Terminal
     icon: mdi:console
     url: http://192.168.0.190:7681
-
-panel_iframe:
   configurator:
     title: Configurator
-    icon: mdi:settings
+    icon: mdi:wrench
     url: http://192.168.0.190:3218
+

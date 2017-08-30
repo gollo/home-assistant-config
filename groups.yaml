@@ -1,5 +1,6 @@
 nest:
   name: Nest
+  view: False
   entities:
   - sensor.living_room_thermostat_temperature
   - sensor.living_room_thermostat_humidity
@@ -13,8 +14,7 @@ nest:
   - binary_sensor.living_room_thermostat_is_locked
 pi_hole:
   name: Pi-Hole Ad Blocking
-  view: no
-  control: hidden
+  view: False
   entities:
   - device_tracker.b827eb407116
   - sensor.pihole_ads_blocked_today
@@ -118,16 +118,19 @@ sun:
   name: Sun
   entities:
   - sun.sun
-light:
-  name: Some Lights
+
+light_view:
+  name: Lights
+  view: True
   entities:
-  - light.downstairs_light
+  - light.downstairs
+  - switch.couch
 
 pi_hole_view:
   name: pi-hole
   view: yes
   entities:
-  -  group.pi_hole
+  - group.pi_hole
 
 travel:
   name: Travel
@@ -136,3 +139,20 @@ travel:
   - sensor.next_train_to_lbg
   - sensor.northern
 
+nest_view:
+  name: Nest
+  view: True
+  entities:
+  - group.nest
+
+air_pollution:
+  name: Lewisham Air Pollution
+  view: False
+  entities:
+  - sensor.lewisham
+
+air_pollution_view:
+  name: Lewisham Air Pollution
+  view: True
+  entities:
+  - group.air_pollution

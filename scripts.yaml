@@ -1,0 +1,6 @@
+# scripts.yaml
+turn_on_some_lights:
+  alias: Turn on the lights
+  sequence:
+  - data: {}
+    service: light.turn_on
