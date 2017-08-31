@@ -30,6 +30,8 @@ laptops:
   entities:
   - device_tracker.5cac4cbde18b
   - device_tracker.t420fluffycom
+  - device_tracker.t420fluffycom_2
+  - device_tracker.t410fluffycom
 nmap_ha_devices:
   name: Home Automation Devices
   entities:
@@ -156,3 +158,13 @@ air_pollution_view:
   view: True
   entities:
   - group.air_pollution
+
+all_things_weather_view:
+  name: All Things Weather
+  view: True
+  entities:
+  - group.air_pollution
+  - group.nest
+  - climate.living_room
+  - group.weather
+  - weather.met_office_lewisham

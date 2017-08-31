@@ -3,3 +3,5 @@ secrets.yaml
 *.db*
 *.log
 /tts
+.HA_VERSION
+.uuid

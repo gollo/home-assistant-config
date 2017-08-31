@@ -179,3 +179,30 @@ b827eb407116:
   picture:
   track: true
   vendor: TP-LINK TECHNOLOGIES CO.,LTD.
+
+t420fluffycom_2:
+  hide_if_away: false
+  icon:
+  mac: 00:21:CC:62:D3:A4
+  name: T420.fluffy.com
+  picture:
+  track: true
+  vendor: Flextronics International
+
+t410fluffycom:
+  hide_if_away: false
+  icon:
+  mac: F0:DE:F1:37:69:04
+  name: T410.fluffy.com
+  picture:
+  track: true
+  vendor: Wistron Infocomm (Zhongshan) Corporation
+
+localhostfluffycom_2:
+  hide_if_away: false
+  icon:
+  mac: F8:04:2E:9A:AF:B4
+  name: localhost.fluffy.com
+  picture:
+  track: true
+  vendor: SAMSUNG ELECTRO-MECHANICS(THAILAND)

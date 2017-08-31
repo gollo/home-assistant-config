@@ -91,6 +91,8 @@ sensor:
     port: 32400
     username: !secret sensor_plex_username
     password: !secret sensor_plex_password
+  - platform: metoffice
+    api_key: "7041f879-f60f-4931-84e3-5dc582beb11e"
     monitored_conditions:
       - weather
       - temperature
