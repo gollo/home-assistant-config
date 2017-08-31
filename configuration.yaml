@@ -74,8 +74,8 @@ sensor:
     locations:
       - Lewisham
 #  - platform: uk_transport
-#    app_id: cc320ee8
-#    app_key: aaffb8f1a9aeb35abbaab931bbc40b4f
+#    app_id: !secret uk_transport_app_id:
+#    app_key: !secret aaffb8f1a9aeb35abbaab931bbc40b4f
 #    queries:
 #      - mode: train
 #        origin: BKH
@@ -92,7 +92,7 @@ sensor:
     username: !secret sensor_plex_username
     password: !secret sensor_plex_password
   - platform: metoffice
-    api_key: "7041f879-f60f-4931-84e3-5dc582beb11e"
+    api_key: !secret sensor_metoffice_api_key
     monitored_conditions:
       - weather
       - temperature
@@ -246,8 +246,8 @@ notify:
     host: 192.168.0.144
   - platform: html5
     name: push
-    gcm_api_key: 'AAAA851ZwwI:APA91bG-rN8Tt-mecmFWt9pkNI3MxyVc8v6nCUbI_JJ1Z1gZqQu_5yyN8nHjAo-gRmXC_VrVBEf34ZQA9uY84Ew8ezbNglKRy9VPyJQcbXysLdOj31x5Jz9io1xZ0mH9Oco1InJKgkt9'
-    gcm_sender_id: 'AIzaSyADusR5qZqaTuVr-aefuVuFi6zRJtqxTNQ'
+    gcm_api_key: !secret html5_gcm_api_key
+    gcm_sender_id: !secret html5_gcm_sender_id
 
 
 light:
