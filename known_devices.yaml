@@ -202,7 +202,25 @@ localhostfluffycom_2:
   hide_if_away: false
   icon:
   mac: F8:04:2E:9A:AF:B4
-  name: localhost.fluffy.com
+  name: TV
+  picture:
+  track: false
+  vendor: SAMSUNG ELECTRO-MECHANICS(THAILAND)
+
+001cdfd5d112:
+  hide_if_away: false
+  icon:
+  mac: 00:1C:DF:D5:D1:12
+  name: Belkin Router WLAN
+  picture:
+  track: false
+  vendor: Belkin International Inc.
+
+001cdfd5d110:
+  hide_if_away: false
+  icon:
+  mac: 00:1C:DF:D5:D1:10
+  name: Belkin Router LAN
   picture:
   track: true
-  vendor: SAMSUNG ELECTRO-MECHANICS(THAILAND)
+  vendor: Belkin International Inc.

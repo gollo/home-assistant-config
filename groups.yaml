@@ -49,6 +49,8 @@ infrastructure:
   - device_tracker.googlehomefluffycom
   - device_tracker.gollonasfluffycom
   - device_tracker.pihole
+  - device_tracker.001cdfd5d112
+  - device_tracker.001cdfd5d110
 media_players:
   name: Media Players
   entities:
@@ -58,6 +60,7 @@ media_players:
   - device_tracker.localhostfluffycom
   - device_tracker.chromecastfluffycom
   - device_tracker.amazon9fee7a7d1fluffycom
+  - device_tracker.localhostfluffycom_2
   - media_player.firetv
   - media_player.firetvkodi
   - device_tracker.amazonbdaafd32bfluffycom
