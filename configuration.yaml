@@ -1,9 +1,9 @@
 homeassistant:
-  customize_glob:
-    light.*:
-      custom_ui_state_card: custom-ui
-    cover.*:
-      custom_ui_state_card: custom-ui
+  #customize_glob:
+  #  light.*:
+  #    custom_ui_state_card: custom-ui
+  #  cover.*:
+  #    custom_ui_state_card: custom-ui
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
