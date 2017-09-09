@@ -31,7 +31,7 @@
   id: '1493458617797'
   trigger:
   - event: sunset
-    offset: -00:30:00
+    offset: -00:45:00
     platform: sun
   action:
   - data:
@@ -57,16 +57,16 @@
   action:
     service: ifttt.trigger
     data: {"event":"On_Off", "value1":"off"}
-- alias: Downstairs Light - Adjust Brightness
-  id: '1495538717797'
-  trigger:
-  - entity_id: input_slider.downstairs_brightness
-    platform: state
-  action:
-  - data_template:
-      brightness: '{{ trigger.to_state.state | int }}'
-      entity_id: light.downstairs
-    service: light.turn_on
+#- alias: Downstairs Light - Adjust Brightness
+#  id: '1495538717797'
+#  trigger:
+#  - entity_id: input_slider.downstairs_brightness
+#    platform: state
+#  action:
+#  - data_template:
+#      brightness: '{{ trigger.to_state.state | int }}'
+#      entity_id: light.downstairs
+#    service: light.turn_on
 
 
   

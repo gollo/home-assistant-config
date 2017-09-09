@@ -18,7 +18,7 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/London
 
-#customize: !include_dir_merge_named customisations
+customize: !include customize.yaml
 
 # Show links to resources in log and frontend
 #introduction:
@@ -268,13 +268,13 @@ binary_sensor:
     host: 192.168.0.1
 
 # Define input_slider
-input_slider:
-  downstairs_brightness:
-    name: Brightness
-    initial: 255
-    min: 0
-    max: 255
-    step: 1
+#input_slider:
+#  downstairs_brightness:
+#    name: Brightness
+#    initial: 255
+#    min: 0
+#    max: 255
+#    step: 1
 
 climate:
   - platform: nest
