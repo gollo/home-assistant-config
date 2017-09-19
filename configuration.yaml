@@ -17,8 +17,7 @@ homeassistant:
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/London
-
-customize: !include customize.yaml
+  customize: !include customize.yaml
 
 # Show links to resources in log and frontend
 #introduction:
@@ -75,6 +74,12 @@ ifttt:
   key: !secret ifttt_key
 
 sensor:
+#  - platform: dht
+#    sensor: DHT22
+#    pin: 23
+#    monitored_conditions:
+#      - temperature
+#      - humidity
   - platform: london_air
     locations:
       - Lewisham
@@ -191,15 +196,15 @@ nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 
-mqtt:
-  broker: 192.168.0.190
-  port: 1883
-  client_id: !secret mqtt_client_id
-  username: !secret mqtt_username
-  password: !secret mqtt_password
+#mqtt:
+#  broker: 192.168.0.190
+#  port: 1883
+#  client_id: !secret mqtt_client_id
+#  username: !secret mqtt_username
+#  password: !secret mqtt_password
 
 device_tracker:
-  - platform: owntracks
+#  - platform: owntracks
 # - platform: bluetooth_tracker
   - platform: nmap_tracker
     hosts: 192.168.0.1/24
@@ -290,4 +295,11 @@ panel_iframe:
     title: Configurator
     icon: mdi:wrench
     url: http://192.168.0.190:3218
+
+hdmi_cec:
+  platform: media_player
+  devices:
+    TV: 0.0.0.0
+    Chromecast: 4.0.0.0
+    FireTV: 3.0.0.0
 
