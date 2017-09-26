@@ -7,7 +7,7 @@
   vendor: NETGEAR
 
 t420fluffycom:
-  name: T420
+  name: T420-Wifi
   hide_if_away: false
   mac: A0:88:B4:AB:3B:20
   picture:
@@ -184,7 +184,7 @@ t420fluffycom_2:
   hide_if_away: false
   icon:
   mac: 00:21:CC:62:D3:A4
-  name: T420.fluffy.com
+  name: T420-Ethernet
   picture:
   track: true
   vendor: Flextronics International
