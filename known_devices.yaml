@@ -224,3 +224,12 @@ localhostfluffycom_2:
   picture:
   track: true
   vendor: Belkin International Inc.
+
+neetpcfluffycom:
+  hide_if_away: false
+  icon:
+  mac: 70:1A:04:BA:40:DE
+  name: neet-PC.fluffy.com
+  picture:
+  track: true
+  vendor: Liteon Technology Corporation

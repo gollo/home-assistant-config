@@ -32,6 +32,7 @@ laptops:
   - device_tracker.t420fluffycom
   - device_tracker.t420fluffycom_2
   - device_tracker.t410fluffycom
+  - device_tracker.neetpcfluffycom
 nmap_ha_devices:
   name: Home Automation Devices
   entities:
@@ -132,6 +133,7 @@ light_view:
   entities:
   - light.downstairs
   - switch.couch
+  - switch.upstairs_lamp
 
 pi_hole_view:
   name: pi-hole
@@ -179,3 +181,13 @@ system_info_view:
   view: True
   entities:
   - group.system_info
+
+automations_view:
+  name: Automation
+  view: True
+  entities:
+  - automation.test_tts_to_google_home
+  - automation.welcome_home
+  - automation.lamp_off_midnight
+  - automation.lamp_off_sunrise
+  - automation.lamp_on_sunset

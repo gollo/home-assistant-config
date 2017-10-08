@@ -196,12 +196,12 @@ nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 
-#mqtt:
-#  broker: 192.168.0.190
-#  port: 1883
-#  client_id: !secret mqtt_client_id
-#  username: !secret mqtt_username
-#  password: !secret mqtt_password
+mqtt:
+  broker: 192.168.0.190
+  port: 1883
+  client_id: !secret mqtt_client_id
+  username: !secret mqtt_username
+  password: !secret mqtt_password
 
 device_tracker:
 #  - platform: owntracks
@@ -265,6 +265,13 @@ light:
     host: 192.168.0.112
 
 switch:
+  - platform: mqtt
+    name: Upstairs Lamp
+    state_topic: "home/livingroom/lamp/state"
+    command_topic: "home/livingroom/lamp/set"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: false
   - platform: tplink
     host: 192.168.0.161
 
@@ -302,4 +309,5 @@ hdmi_cec:
     TV: 0.0.0.0
     Chromecast: 4.0.0.0
     FireTV: 3.0.0.0
+    FireTVStick: 1.0.0.0
 

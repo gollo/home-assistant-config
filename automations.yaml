@@ -25,7 +25,7 @@
     to: home
   condition:
     condition: time
-    after: '08:00:00'
+    after: 08:00:00
     before: '23:00:00'
 - alias: lamp_on_sunset
   id: '1493458617797'
@@ -35,9 +35,8 @@
     platform: sun
   action:
   - data:
-      event: On_Off
-      value1: 'on'
-    service: ifttt.trigger
+      entity_id: switch.upstairs_lamp
+    service: switch.turn_on
 - alias: lamp_off_sunrise
   id: '1343538617791'
   trigger:
@@ -46,27 +45,14 @@
     platform: sun
   action:
   - data:
-      event: On_Off
-      value1: 'off'
-    service: ifttt.trigger
+      entity_id: switch.upstairs_lamp
+    service: switch.turn_off
 - alias: lamp_off_midnight
   id: '1343534537791'
   trigger:
     platform: time
-    at: '00:30:00'
+    at: 00:30:00
   action:
-    service: ifttt.trigger
-    data: {"event":"On_Off", "value1":"off"}
-#- alias: Downstairs Light - Adjust Brightness
-#  id: '1495538717797'
-#  trigger:
-#  - entity_id: input_slider.downstairs_brightness
-#    platform: state
-#  action:
-#  - data_template:
-#      brightness: '{{ trigger.to_state.state | int }}'
-#      entity_id: light.downstairs
-#    service: light.turn_on
-
-
-  
+    service: switch.turn_off
+    data:
+      entity_id: switch.upstairs_lamp
