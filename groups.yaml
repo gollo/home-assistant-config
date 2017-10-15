@@ -191,3 +191,4 @@ automations_view:
   - automation.lamp_off_midnight
   - automation.lamp_off_sunrise
   - automation.lamp_on_sunset
+  - automation.winter_lamp_on

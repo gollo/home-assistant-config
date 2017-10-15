@@ -41,7 +41,7 @@
   id: '1343538617791'
   trigger:
   - event: sunrise
-    offset: 00:45:00
+    offset: 01:00:00
     platform: sun
   action:
   - data:
@@ -56,3 +56,16 @@
     service: switch.turn_off
     data:
       entity_id: switch.upstairs_lamp
+- alias: 'Winter lamp on'
+  action:
+    data:
+      entity_id: switch.upstairs_lamp
+    service: switch.turn_on
+  condition:
+  - after: 05:30:00
+    condition: time
+  id: '1507656264580'
+  trigger:
+  - event: sunrise
+    offset: -01:00:00
+    platform: sun
