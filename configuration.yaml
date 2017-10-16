@@ -203,6 +203,11 @@ mqtt:
   username: !secret mqtt_username
   password: !secret mqtt_password
 
+mqtt_statestream:
+  base_topic: homeassistant
+  publish_attributes: true
+  publish_timestamps: true
+
 device_tracker:
 #  - platform: owntracks
 # - platform: bluetooth_tracker
